@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 ¡Feliz Cumpleaños! 🎉</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!-- Enlace actualizado a la última versión de EmailJS -->
+</head>
+<body>
+
+    <audio id="birthday-sound" src="song.mp3"></audio> <!-- Archivo de sonido -->
+
+    <div class="container">
+        <h1>🎉 ¡Feliz Cumpleaños Lizeth! 🎉</h1>
+        <p>¡Espero que tengas un día increíble lleno de alegría, sorpresas y mucho amor!</p>
+        <p class="confetti">🎊🎈🎂🎈🎊</p>
+
+        <button id="wish-button">Pide un deseo 🎁</button>
+        
+        <div id="wish-input-container" style="display: none;">
+            <textarea id="wish-input" placeholder="Escribe tu deseo aquí..." rows="4" cols="50"></textarea>
+            <br>
+            <button onclick="submitWish()">Enviar deseo</button>
+        </div>
+
+        <div id="wish-message" style="display: none;">
+            <p>¡Que todos tus deseos se hagan realidad! 🎂</p>
+        </div>
+    </div>
+
+    <div class="confetti-bg">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Archivo JavaScript -->
+</body>
+</html>
