@@ -23,3 +23,6 @@ document.getElementById("wish-button").addEventListener("click", function() {
 function submitWish() {
     const wish = document.getElementById("wish-input").value;
     if (wish) {
+
+
+    
