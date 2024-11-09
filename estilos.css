@@ -1,0 +1,127 @@
+/* Estilos para el cuerpo y el contenedor principal */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffdfc4; /* Color de fondo suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff7b2; /* Fondo del contenedor */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    z-index: 1; /* Asegurarse de que el contenedor esté sobre el fondo */
+}
+
+/* Estilos para el encabezado */
+h1 {
+    color: #ff69b4; /* Color del texto del encabezado */
+    font-size: 3.5em; /* Tamaño del texto */
+    margin: 0; /* Sin margen */
+    animation: bounce 1.2s ease infinite; /* Animación de rebote */
+    font-weight: bold; /* Negrita */
+    text-shadow: 2px 2px #f6b2b2; /* Sombra del texto */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #555; /* Color del texto */
+    font-size: 1.3em; /* Tamaño del texto */
+    margin: 15px 0; /* Margen superior e inferior */
+}
+
+/* Estilos para el cuadro de texto */
+textarea {
+    width: 90%; /* Ancho del cuadro de texto */
+    max-width: 500px; /* Ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior */
+    border: 2px solid #ff69b4; /* Borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.1em; /* Tamaño del texto */
+    resize: none; /* Deshabilitar el cambio de tamaño del cuadro */
+}
+
+/* Estilos para el botón */
+button {
+    padding: 12px 24px; /* Espaciado interno */
+    font-size: 1.1em; /* Tamaño del texto */
+    color: #fff; /* Color del texto */
+    background-color: #ff69b4; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    transition: all 0.4s ease; /* Transición suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    margin-top: 10px; /* Margen superior */
+}
+
+button:hover {
+    background-color: #FF85B3; /* Color de fondo al pasar el cursor */
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+
+/* Animación de rebote para el encabezado */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Fondo animado de confeti */
+.confetti-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none; /* Ignorar clics en el fondo */
+    z-index: 0; /* Enviar al fondo */
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px; /* Ancho de las piezas de confeti */
+    height: 15px; /* Alto de las piezas de confeti */
+    background-color: #FFD700; /* Color del confeti */
+    opacity: 0.8; /* Opacidad */
+    animation: fall linear infinite; /* Animación de caída */
+    transform: rotate(45deg); /* Rotación de las piezas de confeti */
+    border-radius: 3px; /* Esquinas redondeadas */
+}
+
+.confetti-piece:nth-child(odd) { background-color: #ff69b4; } /* Color alternativo */
+.confetti-piece:nth-child(even) { background-color: #87CEEB; } /* Color alternativo */
+
+/* Animación de caída del confeti */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0); /* Comienza arriba */
+        opacity: 1; /* Totalmente visible */
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Caída hasta el fondo */
+        opacity: 0; /* Se vuelve invisible */
+    }
+}
+
+/* Posiciones aleatorias para el confeti */
+.confetti-piece:nth-child(1) { left: 10%; animation-duration: 4s; }
+.confetti-piece:nth-child(2) { left: 20%; animation-duration: 5s; }
+.confetti-piece:nth-child(3) { left: 30%; animation-duration: 3.5s; }
+.confetti-piece:nth-child(4) { left: 40%; animation-duration: 6s; }
+.confetti-piece:nth-child(5) { left: 50%; animation-duration: 4.5s; }
+.confetti-piece:nth-child(6) { left: 60%; animation-duration: 3s; }
+.confetti-piece:nth-child(7) { left: 70%; animation-duration: 5.5s; }
+.confetti-piece:nth-child(8) { left: 80%; animation-duration: 4s; }
+.confetti-piece:nth-child(9) { left: 90%; animation-duration: 4.8s; }
