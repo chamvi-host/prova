@@ -14,7 +14,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: rgba(255, 0, 0, 0.1); /* Rojo con baja opacidad (10%) */
+    background-color: rgba(255, 0, 0, 0.2); /* Rojo con opacidad del 20% */
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
