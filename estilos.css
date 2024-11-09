@@ -80,6 +80,38 @@ button:hover {
     z-index: 0;
     background-image: url('spiderman-web-background.png'); /* Fondo con una telaraña */
     background-size: cover;
+    background-position: center;
+}
+
+/* Cambiar fondo para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    .confetti-bg {
+        background-image: url('spiderman-web-mobile.png'); /* Fondo con telaraña para móvil */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        padding: 15px; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Ajustar tamaño del texto en pantallas pequeñas */
+    }
+
+    p {
+        font-size: 1.1em; /* Ajustar tamaño de texto en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 1em; /* Ajustar tamaño del texto del botón */
+        padding: 10px 20px; /* Ajustar padding en botón */
+    }
+
+    textarea {
+        width: 100%; /* Ajustar tamaño del cuadro de texto en pantallas pequeñas */
+        font-size: 1em; /* Ajustar tamaño de texto */
+    }
 }
 
 /* Animación de confeti modificada */
