@@ -21,4 +21,5 @@ document.getElementById("wish-button").addEventListener("click", function() {
 
 // Función para enviar el deseo por EmailJS
 function submitWish() {
-    const wish = document.getElementById("wish-input").
+    const wish = document.getElementById("wish-input").value;
+    if (wish) {
