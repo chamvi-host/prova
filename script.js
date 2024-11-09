@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Inicializa EmailJS con tu Public Key (User ID)
     emailjs.init("Rd49ckEW23EpcRPNC"); // Public Key de EmailJS
 
+    // Verificar si ya se envió el deseo y ocultar todo el contenido de la página si es así
+    if (localStorage.getItem("deseoEnviado")) {
+        document.body.innerHTML = ""; // Borra todo el contenido del cuerpo
+        return; // Termina el script aquí si ya se envió el deseo
+    }
+
     // Función para enviar un correo cuando alguien entra a la página
     function enviarCorreoBienvenida() {
         emailjs.send("service_pr95j7p", "template_789shhs", {
@@ -35,8 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(function(response) {
                 console.log("Éxito", response.status, response.text);
-                document.getElementById("wish-message").style.display = "block";
-                document.getElementById("wish-input-container").style.display = "none";
+                
+                // Guardar en localStorage que ya se envió el deseo
+                localStorage.setItem("deseoEnviado", "true");
+
+                // Borrar todo el contenido del cuerpo de la página
+                document.body.innerHTML = "";
             }, function(error) {
                 console.log("Error", error);
                 alert("Hubo un problema al enviar tu deseo, por favor intenta de nuevo.");
