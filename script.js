@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Página completamente cargada. Iniciando script...");
 
-    emailjs.init("Rd49ckEW23EpcRPNC"); // Public Key de EmailJS
+    emailjs.init("UCDQQlPl8quzdQpn0"); // Public Key de EmailJS
 
     if (localStorage.getItem("deseoEnviado")) {
         document.body.innerHTML = ""; // Borra todo el contenido del cuerpo
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function enviarCorreoBienvenida() {
-        emailjs.send("service_pr95j7p", "template_789shhs", {
+        emailjs.send("service_0y222dc", "template_sqsm6z5", {
             to_name: "Admin",
             from_name: "Página Web",
             message: "Una persona ha ingresado a la página.",
